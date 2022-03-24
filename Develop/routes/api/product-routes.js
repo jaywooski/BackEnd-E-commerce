@@ -25,13 +25,15 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   // find a single product by its `id`
   Product.findOne({
-    include: [
+    include: 
       {
         // be sure to include its associated Category and Tag data
         model: Category,
         model: Tag
+      },
+      where: {
+        id: req.params.id
       }
-    ]
   })
   .then((product) => res.status(200).json(product))
   .catch((err) => {

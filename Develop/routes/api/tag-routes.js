@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
       }
   })
   .then(data => res.json(data))
-  .catch(err => console.log(err))
+  .catch(err => res.status(400).json(err))
   // be sure to include its associated Product data
 });
 
@@ -29,7 +29,7 @@ router.get('/:id', (req, res) => {
     }
   })
   .then(data => res.json(data))
-  .catch(err => console.log(err))
+  .catch(err => res.status(400).json(err))
 });
 
 router.post('/', (req, res) => {
@@ -38,7 +38,7 @@ router.post('/', (req, res) => {
     tag_name: req.body.tag_name
   })
   .then(data => res.json(data))
-  .catch(err => console.log(err))
+  .catch(err => res.status(500).json(err))
 });
 
 router.put('/:id', (req, res) => {
@@ -60,10 +60,7 @@ router.put('/:id', (req, res) => {
     }
     res.json(data)
   })
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  })
+  .catch(err => res.status(500).json(err))
 });
 
 router.delete('/:id', (req, res) => {
@@ -80,10 +77,7 @@ router.delete('/:id', (req, res) => {
     }
     res.json(data)
   })
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  })
+  .catch(err => res.status(500).json(err))
 });
 
 module.exports = router;

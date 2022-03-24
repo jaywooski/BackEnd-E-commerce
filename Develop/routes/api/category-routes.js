@@ -28,13 +28,11 @@ router.get('/:id', (req, res) => {
       id: req.params.id
     }, 
     // be sure to include its associated Products
-    include: [{
-      model: Product,
-      where: {
-        id: category_id
+    include: {
+      model: Product
       }
-    }]
-  })
+    }
+  )
   .then(foundCategories => res.json(foundCategories))
   .catch(err => console.log(err));
 });
