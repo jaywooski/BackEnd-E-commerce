@@ -9,9 +9,9 @@ router.get('/', (req, res) => {
     // be sure to include its associated Products
     include: [{
       model: Product,
-      where: {
-        id: category_id
-      }
+      // where: {
+      //   id: category_id
+      // }
     }] 
   })
   .then(foundCategories => res.json(foundCategories))
