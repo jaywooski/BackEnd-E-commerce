@@ -7,5 +7,5 @@ This program is a mock back-end for an e-commerce site. It utilizes the function
 To Install this project, Clone the repo into whatever folder you wish, run npm install in the terminal from the root folder of your project and open Insomnia in order to test the routes. Perhaps you would want to build a frontend(client-side) application along this.
 
 ## Links
-Here is a link to the [github repo]().
-Here is a link to the [live presentation]().
+Here is a link to the [github repo](https://github.com/jaywooski/BackEnd-E-commerce).
+Here is a link to the [live presentation](https://drive.google.com/file/d/19vbBYQNQFJyJI7HCQeTr9Zbqc8vJUu91/view).
